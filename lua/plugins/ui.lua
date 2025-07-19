@@ -83,7 +83,6 @@ return {
       { "<A-9>", "<CMD>BufferGoto 9<CR>",       mode = {"n"}, desc = "[Buffer] Go to buffer 9"    },
       { "<A-h>", "<CMD>BufferPrevious<CR>",     mode = {"n"}, desc = "[Buffer] Previous buffer"   },
       { "<A-l>", "<CMD>BufferNext<CR>",         mode = {"n"}, desc = "[Buffer] Next buffer"       },
-      { "<A-w>", "<CMD>BufferClose<CR>",        mode = {"n"}, desc = "Close buffer"               },
     },
     opts = {
       animation = false,
@@ -105,7 +104,7 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
     keys = {
-      { "<leader>tg", "<CMD>NvimTreeToggle<CR>", mode = {"n"}, desc = "[NvimTree] Toggle NvimTree" },
+      { "tg", "<CMD>NvimTreeToggle<CR>", mode = {"n"}, desc = "[NvimTree] Toggle NvimTree" },
     },
     opts = {}
   },
@@ -126,7 +125,7 @@ return {
       -- OPTIONAL:
       --   `nvim-notify` is only needed, if you want to use the notification view.
       --   If not available, we use `mini` as the fallback
-      {"rcarriga/nvim-notify", opts = {background_colour = "#000000"}}
+      -- {"rcarriga/nvim-notify", opts = {background_colour = "#000000"}}
     },
     keys = {
       { "<leader>sN", "<CMD>Noice pick<CR>", desc = "[Noice] Pick history messages" }, -- FIXME: Currently unusable
