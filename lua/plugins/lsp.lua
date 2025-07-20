@@ -26,7 +26,10 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
-    dependencies = { "saghen/blink.cmp", "williamboman/mason.nvim" },
+    dependencies = {
+      "saghen/blink.cmp",
+      "williamboman/mason.nvim",
+    },
 
     -- example calling setup directly for each LSP
     config = function()
