@@ -6,6 +6,7 @@ return {
       -- 'rafamadriz/friendly-snippets' 
       "nvim-tree/nvim-web-devicons",
       "onsails/lspkind.nvim",
+      "folke/lazydev.nvim",
       },
 
     -- use a release tag to download pre-built binaries
@@ -74,6 +75,11 @@ return {
           end
         end,
         providers = {
+          lazydev = {
+            name = "LazyDev",
+            module = "lazydev.integrations.blink",
+            score_offset = 95,
+          },
           path = {
             score_offset = 95,
             opts = {
