@@ -20,7 +20,7 @@ return {
         "isort",
       },
     },
-    ensure_installed = { "ensure_installed" },
+    opts_extend = { "ensure_installed" },
   },
   {
     "stevearc/conform.nvim",
