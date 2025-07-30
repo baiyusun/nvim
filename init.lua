@@ -1,4 +1,4 @@
-vim.opt.number=true
+vim.opt.number = true
 -- Make sure to setup `mapleader` and `maplocalleader` before
 -- loading lazy.nvim so that mappings are correct.
 -- This is also a good place to setup other settings (vim.opt)
@@ -18,3 +18,6 @@ vim.opt.smartindent = true
 
 require("config.lazy") -- ~/.config/nvim/lua/config.lua
 require("keymapping")
+require("options")
+require("autocmds")
+-- require("")

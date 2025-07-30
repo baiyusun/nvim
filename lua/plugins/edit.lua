@@ -7,12 +7,6 @@ return {
     },
   },
 
-  -- {
-  --   "cappyzawa/trim.nvim",
-  --   event = "BufWritePre",
-  --   opts = {},
-  -- },
-
   {
     "mbbill/undotree",
     keys = {
@@ -190,6 +184,4 @@ return {
       end)
     end,
   },
-
-  -- { "wakatime/vim-wakatime", lazy = false },
 }

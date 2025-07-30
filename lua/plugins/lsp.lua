@@ -29,6 +29,7 @@ return {
     dependencies = {
       "saghen/blink.cmp",
       "williamboman/mason.nvim",
+      "hrsh7th/cmp-nvim-lsp",
     },
 
     -- example calling setup directly for each LSP
@@ -205,4 +206,45 @@ return {
       require("lualine").setup(opts)
     end,
   },
+
+  -- lsp
+  {
+    "ray-x/lsp_signature.nvim",
+    event = "VeryLazy",
+    opts = {},
+    config = function(_, opts)
+      require("lsp_signature").setup(opts)
+    end,
+  },
+
+  -- 增强的语法高亮和代码折叠
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    config = function()
+      require("treesitter-context").setup({
+        enable = true,
+        max_lines = 0,
+        min_window_height = 0,
+        line_numbers = true,
+        multiline_threshold = 20,
+        trim_scope = "outer",
+        mode = "cursor",
+        separator = nil,
+        zindex = 20,
+        on_attach = nil,
+      })
+    end,
+  },
+
+  -- LSP 设置
+  -- lsp-zero 是一个已经配置好的基础 lsp 功能的合集插件
+  {
+    "VonHeikemen/lsp-zero.nvim",
+    branch = "v3.x",
+    lazy = true,
+    config = false,
+  },
+
+  { "mhartington/formatter.nvim" },
 }

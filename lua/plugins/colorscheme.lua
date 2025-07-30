@@ -7,11 +7,11 @@ return {
       transparent_background = true,
       custom_highlights = function(colors)
         return {
-          LineNr     = { fg = colors.surface2 },
-          Visual     = { bg = colors.overlay0 },
-          Search     = { bg = colors.surface2 },
-          IncSearch  = { bg = colors.lavender },
-          CurSearch  = { bg = colors.lavender },
+          LineNr = { fg = colors.surface2 },
+          Visual = { bg = colors.overlay0 },
+          Search = { bg = colors.surface2 },
+          IncSearch = { bg = colors.lavender },
+          CurSearch = { bg = colors.lavender },
           MatchParen = { bg = colors.lavender, fg = colors.base, bold = true },
         }
       end,
@@ -24,12 +24,23 @@ return {
         notify = true,
         nvimtree = true,
         rainbow_delimiters = true,
-      }
+      },
     },
     config = function(_, opts)
       require("catppuccin").setup(opts)
 
       vim.cmd.colorscheme("catppuccin")
-    end
+    end,
+  },
+
+  {
+    "brenoprata10/nvim-highlight-colors",
+    config = function()
+      require("nvim-highlight-colors").setup({
+        render = "background",
+        enabled_named_color = true,
+        enabled_tailwind = true,
+      })
+    end,
   },
 }
