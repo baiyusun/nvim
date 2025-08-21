@@ -35,24 +35,5 @@ return {
     end,
   },
 
-  -- 自动补全源（nvim-cmp 和 cmp-nvim-lsp）
-  {
-    "hrsh7th/nvim-cmp",
-    event = "InsertEnter",
-    dependencies = { "hrsh7th/cmp-nvim-lsp" },
-    config = function()
-      local cmp = require("cmp")
-      cmp.setup({
-        sources = {
-          { name = "nvim_lsp" },
-          { name = "buffer" },
-        },
-        mapping = cmp.mapping.preset.insert({
-          ["<CR>"] = cmp.mapping.confirm({ select = true }),
-        }),
-      })
-    end,
-  },
-
   { "hrsh7th/cmp-nvim-lsp" },
 }
